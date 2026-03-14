@@ -8,23 +8,23 @@ In the highly competitive telecommunications industry, acquiring a new customer 
 
 **Dataset**
 
-Source: Kaggle (Telco Customer Churn).
+* Source: Kaggle (Telco Customer Churn).
 
-Scale: 7,043 rows and 21 feature columns.
+* Scale: 7,043 rows and 21 feature columns.
 
-Key Attributes: Demographics (Gender, Seniority), Services (Internet, Tech Support), and Financials (Monthly/Total Charges).
+* Key Attributes: Demographics (Gender, Seniority), Services (Internet, Tech Support), and Financials (Monthly/Total Charges).
 
 **Exploratory Data Analysis (EDA)**
 
 The EDA phase involves exploring the dataset to gain insights into the underlying patterns and relationship. Key steps in the EDA process includes:
 
-**Data Sanitization:** Converting TotalCharges to numeric and handling missing values.
++ **Data Sanitization:** Converting TotalCharges to numeric and handling missing values.
 
-**Feature Engineering:** Binning tenure into 12-month cohorts to track lifecycle trends.
+- **Feature Engineering:** Binning tenure into 12-month cohorts to track lifecycle trends.
 
-**Univariate Exploration:** Analyzing the distribution of the Churn target variable.
+* **Univariate Exploration:** Analyzing the distribution of the Churn target variable.
 
-**Bivariate Correlation:** Using Kernel Density Estimation (KDE) plots to compare charge distributions between churners and non-churners. 
+* **Bivariate Correlation:** Using Kernel Density Estimation (KDE) plots to compare charge distributions between churners and non-churners. 
 
 **Findings from Analysis**
 
