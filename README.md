@@ -39,3 +39,33 @@ Based on the EDA conducted in the analysis, several high-impact insights were di
 4. Customers without Tech Support or Online Security show a higher propensity to leave, highlighting the value of sticky services.
 
 5. There is a notable correlation between churn and the Electronic Check payment method.
+
+**Modeling & Performance**
+   
+To move from analysis to action, I developed a machine learning pipeline focused on high sensitivity (recall) to ensure we don't miss potential churners.
+
+1. **Handling Class Imbalance**
+   
+The original dataset was imbalanced (roughly 27% churn). I applied SMOTE to oversample the minority class, ensuring the model is equally proficient at identifying both Churners and Non-Churners.
+
+2. **The Model: Random Forest Classifier**
+   
+I chose the Random Forest algorithm for its robustness and ability to handle the various categorical features (Internet Service, Contract Type, etc.) present in the Telco data.
+
+3. **Report Card (Results)**
+
+* **High Recall:** The model is optimized to capture the maximum number of actual churners.
+
+* **Evaluation Metrics:** (Note: You can fill these in from your Notebook output, but typically with SMOTE/Random Forest, you'll see a balanced accuracy across both classes).
+
+**Project Deployment (The Web App)**
+   
+I didn't stop at the notebook, I built a functional web interface using Flask to make these predictions accessible to non-technical users.
+
+* **Backend:** Flask API (main.py)
+
+* **Model Storage:** The trained model is serialized using joblib for real-time inference.
+
+* **Input Handling:** Users can input customer details (Tenure, Monthly Charges, Contract Type) through a web form to receive an instant churn probability score.
+
+To simplify user input in the web app, I automated the calculation of Total Charges by using the relationship between Tenure and Monthly Fees.
